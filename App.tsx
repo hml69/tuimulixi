@@ -61,8 +61,12 @@ const App: React.FC = () => {
   }, [isOpening, bags, minAmount, maxAmount]);
 
   const resetGame = () => {
-    if (confirm("Bạn có muốn làm mới tất cả túi mù không?")) {
+    if (confirm("Bạn có muốn làm mới tất cả túi và đặt lại tổng lộc không?")) {
+      // Reset bags
       setBags(prev => prev.map(b => ({ ...b, isOpened: false, content: undefined })));
+      // Clear history (this resets total money)
+      setHistory([]);
+      // Clear current reveal
       setCurrentReveal(null);
     }
   };
@@ -294,7 +298,7 @@ const App: React.FC = () => {
 
       {/* Footer Info */}
       <footer className="mt-12 text-center text-slate-400 text-sm px-4">
-        <p>© 2026 - Chúc mừng năm mới, phát tài phát lộc!</p>
+        <p>© 2025 - Chúc mừng năm mới, phát tài phát lộc!</p>
       </footer>
     </div>
   );
