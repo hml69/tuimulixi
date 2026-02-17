@@ -294,7 +294,7 @@ const App: React.FC = () => {
 
       {/* Footer Info */}
       <footer className="mt-12 text-center text-slate-400 text-sm px-4">
-        <p>© 2025 - Chúc mừng năm mới, phát tài phát lộc!</p>
+        <p>© 2026 - Chúc mừng năm mới, phát tài phát lộc!</p>
       </footer>
     </div>
   );
